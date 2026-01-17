@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SpaceX Launch Telemetry UI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="logo">
+        <span class="logo-mark">SX</span>
+        <span class="logo-text">Launch Control</span>
+      </div>
+      <nav class="nav">
+        <a href="#" class="nav-link active">Dashboard</a>
+        <a href="#" class="nav-link">Missions</a>
+        <a href="#" class="nav-link">Telemetry</a>
+        <a href="#" class="nav-link">Settings</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Top Bar -->
+      <header class="topbar">
+        <h1 class="title">Falcon 9 – Demo Launch</h1>
+        <div class="topbar-right">
+          <span class="status-pill status-go">GO FOR LAUNCH</span>
+          <span class="topbar-meta">T- <span id="timeToLaunch">00:10:00</span></span>
+        </div>
+      </header>
+
+      <!-- Layout grid -->
+      <section class="grid">
+        <!-- Telemetry Summary Cards -->
+        <div class="card telemetry-card">
+          <h2 class="card-title">Key Telemetry</h2>
+          <div class="telemetry-grid">
+            <div class="metric">
+              <span class="metric-label">Altitude</span>
+              <span class="metric-value" id="altitude">0 km</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Velocity</span>
+              <span class="metric-value" id="velocity">0 m/s</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Stage</span>
+              <span class="metric-value" id="stage">1</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Fuel</span>
+              <span class="metric-value" id="fuel">100%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Chart Placeholder -->
+        <div class="card chart-card">
+          <h2 class="card-title">Altitude vs Time</h2>
+          <div class="chart-placeholder">
+            <span>Chart renders here</span>
+          </div>
+        </div>
+
+        <!-- Event Log -->
+        <div class="card log-card">
+          <h2 class="card-title">Event Log</h2>
+          <ul class="log-list" id="eventLog">
+            <li>[T-10:00] Launch sequence initialized.</li>
+          </ul>
+        </div>
+
+        <!-- System Status -->
+        <div class="card status-card">
+          <h2 class="card-title">Systems Status</h2>
+          <ul class="status-list">
+            <li class="status-item">
+              <span>Avionics</span>
+              <span class="status-pill status-ok">OK</span>
+            </li>
+            <li class="status-item">
+              <span>Propulsion</span>
+              <span class="status-pill status-ok">OK</span>
+            </li>
+            <li class="status-item">
+              <span>Guidance</span>
+              <span class="status-pill status-ok">OK</span>
+            </li>
+            <li class="status-item">
+              <span>Tracking</span>
+              <span class="status-pill status-ok">OK</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
